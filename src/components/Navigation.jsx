@@ -36,7 +36,7 @@ const Navigation = () => {
       background: "rgba(0, 0, 0, 0.4)",
     },
     icons: {
-      fontSize: "1.5rem",  // Default size for desktop
+      fontSize: "1.5rem",  
     }
   };
 
