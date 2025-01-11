@@ -1,51 +1,17 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import CV from "../assets/wise-cv.pdf";
 
 const Header = () => {
-  const typingRef = useRef(null);
-
-  useEffect(() => {
-    const typingEffect = () => {
-      const text = "Hi I Am Wise Mabohlale Nkuna";
-      let index = 0;
-      let isDeleting = false;
-
-      const type = () => {
-        if (isDeleting) {
-          index--;
-        } else {
-          index++;
-        }
-
-        typingRef.current.textContent = text.substring(0, index);
-
-        if (!isDeleting && index === text.length) {
-          setTimeout(() => {
-            isDeleting = true;
-            setTimeout(type, 100);
-          }, 1000);
-        }
-
-        if (isDeleting && index === 0) {
-          isDeleting = false;
-        }
-
-        if (!isDeleting || index > 0) {
-          setTimeout(type, isDeleting ? 100 : 200);
-        }
-      };
-
-      type();
-    };
-
-    typingEffect();
-  }, []);
-
   return (
     <header style={styles.header}>
       <div style={styles.headerContainer}>
-        <h1 style={styles.heading} ref={typingRef}></h1>
+        <h1 style={styles.heading}>Hi, I Am Wise Mabohlale Nkuna</h1>
         <div style={styles.textLight}>Fullstack Developer</div>
+        <div style={styles.details}>
+          <p>CodeTribe Location: Pretoria</p>
+          <p>Program Enrolled: Fullstack Mobile and Web Development</p>
+          <p>Date: Last updated 10 January 2025</p>
+        </div>
         <div style={styles.cta}>
           <a style={styles.btn} href={CV} download>
             Click to Download My CV
@@ -60,64 +26,176 @@ const Header = () => {
 };
 
 const styles = {
-    header: {
-      height: "100vh",
-      paddingTop: "5rem",
-      overflow: "hidden",
-    },
-    headerContainer: {
-      textAlign: "center",
-      height: "100%",
-      position: "relative",
-    },
+  header: {
+    height: "100vh",
+    width: "100vw",
+    padding: "2rem",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    background: "linear-gradient(135deg, #004AAD, #F4C561)",
+    color: "#FFF",
+    position: "relative",
+    overflow: "hidden",
+  },
+
+  headerContainer: {
+    textAlign: "center",
+    width: "100%",
+    maxWidth: "1200px", // Fixed width for large screens
+    margin: "0 auto",
+    padding: "0 2rem",
+  },
+
+  heading: {
+    fontSize: "3rem",
+    fontWeight: "700",
+    marginBottom: "1rem",
+    fontFamily: "'Segoe UI', sans-serif",
+    color: "#F4C561",
+    textShadow: "2px 2px 5px rgba(0, 0, 0, 0.4)",
+    transition: "color 0.3s ease",
+  },
+
+  textLight: {
+    fontSize: "1.3rem",
+    marginBottom: "2rem",
+    color: "#E0E0E0",
+  },
+
+  details: {
+    textAlign: "left",
+    marginLeft: "15px",
+    fontSize: "1.1rem",
+    lineHeight: "1.8",
+    color: "#D1D1D1",
+    marginBottom: "2rem",
+  },
+
+  cta: {
+    marginTop: "2rem",
+    display: "flex",
+    justifyContent: "center",
+  },
+
+  btn: {
+    backgroundColor: "#F4C561",
+    color: "#241D10",
+    padding: "1rem 2.5rem",
+    borderRadius: "50px",
+    fontSize: "1.2rem",
+    fontWeight: "bold",
+    textDecoration: "none",
+    transition: "background-color 0.3s ease, transform 0.3s ease",
+    border: "none",
+    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+  },
+
+  btnHover: {
+    backgroundColor: "#E8B548",
+    transform: "scale(1.05)",
+  },
+
+  scrollDown: {
+    marginTop: "2rem",
+    fontWeight: "500",
+    fontSize: "1rem",
+    textDecoration: "underline",
+    color: "#F4C561",
+    animation: "bounce 2s infinite",
+  },
+
+  "@media screen and (max-width: 768px)": {
     heading: {
-      fontSize: "3rem",
-      color: "#004AAD",
-      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-      fontWeight: "bold",
-      marginBottom: "1rem",
-      marginTop: "0.5rem",
-      whiteSpace: "nowrap",
-      display: "inline-block",
+      fontSize: "2rem",
     },
+
+    details: {
+      marginLeft: "10px",
+    },
+
     textLight: {
-      color: "#a9a9a9",
+      fontSize: "1.1rem",
     },
-    cta: {
-      marginTop: "1.5rem",
-      display: "flex",
-      gap: "1.2rem",
-      justifyContent: "center",
-    },
+
     btn: {
-      backgroundColor: "#4CAF50",
-      color: "#fff",
       padding: "0.8rem 2rem",
-      borderRadius: "50px",
-      fontSize: "1.2rem",
-      textDecoration: "none",
-      transition: "background-color 0.6s ease",
-      cursor: "pointer",
-      marginBottom: "0.5rem", // Reduced margin-bottom
+      fontSize: "1rem",
     },
+
     scrollDown: {
-      position: "absolute",
-      right: "-2.3rem",
-      bottom: "5rem",
-      transform: "rotateZ(90deg)",
-      fontWeight: "200",
       fontSize: "0.9rem",
     },
-  };
-  
+  },
+
+  "@media screen and (max-width: 480px)": {
+    heading: {
+      fontSize: "1.6rem",
+    },
+
+    details: {
+      marginLeft: "5px",
+    },
+
+    textLight: {
+      fontSize: "1rem",
+    },
+
+    btn: {
+      padding: "0.8rem 2rem",
+      fontSize: "1rem",
+    },
+
+    scrollDown: {
+      fontSize: "0.9rem",
+    },
+  },
+};
+
 const globalStyle = document.createElement("style");
 globalStyle.innerHTML = `
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #241D10, #004AAD, #F4C561);
+    color: #FFFFFF;
+    overflow-x: hidden;
   }
-  .fadeIn {
-    animation: fadeIn 4s ease-in-out;
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2rem !important;
+    }
+
+    p, a {
+      font-size: 0.9rem !important;
+    }
+
+    .details {
+      margin-left: 10px !important;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem !important;
+    }
+
+    p, a {
+      font-size: 0.8rem !important;
+    }
   }
 `;
 
