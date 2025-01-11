@@ -3,7 +3,6 @@ import About from "./components/About-me";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience"; 
-import SiteFooter from "./components/SiteFooter";
 import Navigation from "./components/Navigation";
 import Header from "./components/Header";
 import FeedbackAndGoals from "./components/FeedbackAndGoals"; 
@@ -37,13 +36,11 @@ const App = () => {
         <section id="feedback-and-goals"> 
           <FeedbackAndGoals />
         </section>
-
+        
         <section id="contact">
           <Contact />
         </section>
       </main>
-
-      <SiteFooter />
     </div>
   );
 };

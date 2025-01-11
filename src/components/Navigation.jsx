@@ -17,6 +17,7 @@ const Navigation = () => {
       gap: "1rem",
       borderRadius: "3rem",
       backdropFilter: "blur(15px)",
+      transition: "all 0.3s ease",
     },
     link: {
       background: "transparent",
@@ -34,6 +35,9 @@ const Navigation = () => {
     hoverLink: {
       background: "rgba(0, 0, 0, 0.4)",
     },
+    icons: {
+      fontSize: "1.5rem",  // Default size for desktop
+    }
   };
 
   return (
@@ -48,7 +52,7 @@ const Navigation = () => {
         onMouseOver={(e) => (e.currentTarget.style.background = styles.hoverLink.background)}
         onMouseOut={(e) => (e.currentTarget.style.background = "transparent")}
       >
-        <i className="home-icon">🏠</i>
+        <i className="home-icon" style={styles.icons}>🏠</i>
       </a>
       <a
         onClick={() => setActive("#about")}
@@ -60,7 +64,7 @@ const Navigation = () => {
         onMouseOver={(e) => (e.currentTarget.style.background = styles.hoverLink.background)}
         onMouseOut={(e) => (e.currentTarget.style.background = "transparent")}
       >
-        <i className="user-icon">👤</i>
+        <i className="user-icon" style={styles.icons}>👤</i>
       </a>
       <a
         onClick={() => setActive("#experience")}
@@ -72,7 +76,7 @@ const Navigation = () => {
         onMouseOver={(e) => (e.currentTarget.style.background = styles.hoverLink.background)}
         onMouseOut={(e) => (e.currentTarget.style.background = "transparent")}
       >
-        <i className="experience-icon">📚</i>
+        <i className="experience-icon" style={styles.icons}>📚</i>
       </a>
       <a
         onClick={() => setActive("#contact")}
@@ -84,7 +88,7 @@ const Navigation = () => {
         onMouseOver={(e) => (e.currentTarget.style.background = styles.hoverLink.background)}
         onMouseOut={(e) => (e.currentTarget.style.background = "transparent")}
       >
-        <i className="contact-icon">💬</i>
+        <i className="contact-icon" style={styles.icons}>💬</i>
       </a>
     </nav>
   );

@@ -71,12 +71,12 @@ const groupProjects = [
 
 const Projects = () => {
   return (
-    <section id="projects" style={styles.projectsSection}>
-      <h2 style={styles.title}>Individual Projects</h2>
-      <div style={styles.container}>
+    <section id="projects">
+      <h2>Individual Projects</h2>
+      <div className="container">
         {individualProjects.map(({ id, image, title, description, technologies, github, demo, features, challenges }) => (
-          <article key={id} style={styles.item}>
-            <div style={styles.itemImage}>
+          <article key={id} className="item">
+            <div className="itemImage">
               <img src={image} alt={title} />
             </div>
             <h3>{title}</h3>
@@ -86,11 +86,11 @@ const Projects = () => {
               <li><strong>Key Features:</strong> {features.join(", ")}</li>
               <li><strong>Challenges Faced and Solutions:</strong> {challenges}</li>
             </ul>
-            <div style={styles.cta}>
-              <a href={github} style={styles.btn} target="_blank" rel="noopener noreferrer">
+            <div className="cta">
+              <a href={github} className="btn" target="_blank" rel="noopener noreferrer">
                 Github
               </a>
-              <a href={demo} style={styles.btnPrimary} target="_blank" rel="noopener noreferrer">
+              <a href={demo} className="btnPrimary" target="_blank" rel="noopener noreferrer">
                 Live Demo
               </a>
             </div>
@@ -98,11 +98,11 @@ const Projects = () => {
         ))}
       </div>
 
-      <h2 style={styles.title}>Group Projects</h2>
-      <div style={styles.container}>
+      <h2>Group Projects</h2>
+      <div className="container">
         {groupProjects.map(({ id, image, title, description, technologies, github, demo, features, team, collaboration }) => (
-          <article key={id} style={styles.item}>
-            <div style={styles.itemImage}>
+          <article key={id} className="item">
+            <div className="itemImage">
               <img src={image} alt={title} />
             </div>
             <h3>{title}</h3>
@@ -113,11 +113,11 @@ const Projects = () => {
               <li><strong>Team Members:</strong> {team.join(", ")}</li>
               <li><strong>Collaboration Experience:</strong> {collaboration}</li>
             </ul>
-            <div style={styles.cta}>
-              <a href={github} style={styles.btn} target="_blank" rel="noopener noreferrer">
+            <div className="cta">
+              <a href={github} className="btn" target="_blank" rel="noopener noreferrer">
                 Github
               </a>
-              <a href={demo} style={styles.btnPrimary} target="_blank" rel="noopener noreferrer">
+              <a href={demo} className="btnPrimary" target="_blank" rel="noopener noreferrer">
                 Live Demo
               </a>
             </div>
@@ -126,75 +126,6 @@ const Projects = () => {
       </div>
     </section>
   );
-};
-const styles = {
-  projectsSection: {
-    padding: "4rem 0",
-    textAlign: "center",
-    background: "linear-gradient(to bottom, #004AAD, #F4C561)", 
-    color: "#FFFFFF" 
-  },
-  header: {
-    fontSize: "1.2rem",
-    color: "#333"
-  },
-  title: {
-    fontSize: "2.5rem",
-    marginBottom: "2rem"
-  },
-  container: {
-    display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: "2.5rem",
-    marginTop: "2rem"
-  },
-  item: {
-    backgroundColor: "transparent", 
-    padding: "1.2rem",
-    borderRadius: "2rem",
-    border: "1px solid transparent",
-    transition: "0.3s ease-in-out",
-    boxShadow: "0 4px 8px rgba(0,0,0,0.1)"
-  },
-  itemImage: {
-    borderRadius: "1.5rem",
-    overflow: "hidden",
-    marginBottom: "1rem"
-  },
-  cta: {
-    display: "flex",
-    gap: "1rem",
-    marginBottom: "1rem"
-  },
-  btn: {
-    padding: "0.8rem 1.2rem",
-    backgroundColor: "#333",
-    color: "#fff",
-    borderRadius: "4px",
-    textDecoration: "none",
-    textAlign: "center"
-  },
-  btnPrimary: {
-    padding: "0.8rem 1.2rem",
-    backgroundColor: "#004AAD",
-    color: "#fff",
-    borderRadius: "4px",
-    textDecoration: "none",
-    textAlign: "center"
-  },
-  // Media Queries
-  '@media screen and (max-width: 1024px)': {
-    container: {
-      gridTemplateColumns: "1fr 1fr",
-      gap: "1.2rem"
-    }
-  },
-  '@media screen and (max-width: 600px)': {
-    container: {
-      gridTemplateColumns: "1fr",
-      gap: "1rem"
-    }
-  }
 };
 
 export default Projects;
