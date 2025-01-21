@@ -1,4 +1,5 @@
 import React from "react";
+import './styles/Experience.css';
 
 const skillsFrontend = [
   { skill: "HTML", level: "Experienced" },
@@ -36,7 +37,7 @@ const ExperienceSection = ({ title, skills }) => (
 const Experience = () => {
   return (
     <section id="experience">
-      <h2 style={{ color: "#FFFFFF", fontSize: "2.5rem", marginBottom: "2rem" }}>My Skills</h2>
+      <h2 style={{ color: "#800000", fontSize: "2.5rem", marginBottom: "2rem" }}>My Skills</h2>
       <div className="experience-container">
         <ExperienceSection title="Frontend Development" skills={skillsFrontend} />
         <ExperienceSection title="Backend Development" skills={skillsBackend} />

@@ -5,6 +5,7 @@ import IMG3 from "../assets/img3.png";
 import IMG4 from "../assets/img4.png";
 import IMG5 from "../assets/img5.png";
 import IMG6 from "../assets/img6.png";
+import './styles/Projects.css';
 
 const individualProjects = [
   {
@@ -72,6 +73,16 @@ const groupProjects = [
 const Projects = () => {
   return (
     <section id="projects">
+      <h2 style={{ 
+        color: "#800000", 
+        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif", 
+        textShadow: "2px 2px 5px rgba(0, 0, 0, 0.5)",
+        fontSize: "2rem",
+        marginBottom: "3rem"
+      }}>
+        My Projects
+      </h2>
+
       <h2>Individual Projects</h2>
       <div className="container">
         {individualProjects.map(({ id, image, title, description, technologies, github, demo, features, challenges }) => (

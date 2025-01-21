@@ -3,42 +3,41 @@ import React from "react";
 const FeedbackAndGoals = () => {
   return (
     <section className="feedback-container">
-      <h1 className="heading">Feedback & Post-Program Goals</h1>
+      <div className="content-section">
+        <h1 className="main-title">Feedback & After-Program Aspirations</h1>
 
-      <div className="section">
-        <h2 className="sub-heading">Facilitator Feedback</h2>
-        <p className="text">
-          "The facilitator has provided insightful guidance throughout the program, 
-          offering both constructive feedback and encouragement."
-        </p>
-      </div>
+        <div className="goal-section">
+          <h2 className="subtitle">Mentor Insights</h2>
+          <p className="description">
+            "The mentor has provided valuable perspectives throughout the journey, offering both actionable feedback and motivational support."
+          </p>
+        </div>
 
-      <div className="section">
-        <h2 className="sub-heading">Self-Reflection</h2>
-        <p className="text">
-          "I have grown immensely as a developer during this program. I have gained a deeper 
-          understanding of full-stack development and have worked on enhancing my problem-solving skills. 
-          I still need to improve on time management and testing."
-        </p>
-      </div>
+        <div className="goal-section">
+          <h2 className="subtitle">Personal Growth</h2>
+          <p className="description">
+            "My abilities have expanded significantly in this program. I've developed a stronger grasp of full-stack methodologies and enhanced my problem-solving capabilities. However, I must focus on improving my time management and testing proficiency."
+          </p>
+        </div>
 
-      <div className="section">
-        <h2 className="sub-heading">Post-Program Goals</h2>
-        <div className="goals-container">
-          <div className="goal-category">
-            <h3 className="goal-title">Short-Term Goals:</h3>
-            <ul className="goals-list">
-              <li>Secure a job in web development.</li>
-              <li>Build 2-3 more portfolio projects.</li>
-            </ul>
-          </div>
+        <div className="goal-section">
+          <h2 className="subtitle">Post-Program Aspirations</h2>
+          <div className="goals-wrapper">
+            <div className="goal-category">
+              <h3 className="category-heading">Immediate Aspirations:</h3>
+              <ul className="goal-list">
+                <li>Obtain a role in web development.</li>
+                <li>Create 2-3 additional projects for my portfolio.</li>
+              </ul>
+            </div>
 
-          <div className="goal-category">
-            <h3 className="goal-title">Long-Term Goals:</h3>
-            <ul className="goals-list">
-              <li>Become a full-stack developer.</li>
-              <li>Contribute to open-source projects.</li>
-            </ul>
+            <div className="goal-category">
+              <h3 className="category-heading">Long-Term Aspirations:</h3>
+              <ul className="goal-list">
+                <li>Become proficient as a full-stack developer.</li>
+                <li>Engage in meaningful open-source contributions.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

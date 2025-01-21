@@ -6,6 +6,9 @@ import Experience from "./components/Experience";
 import Navigation from "./components/Navigation";
 import Header from "./components/Header";
 import FeedbackAndGoals from "./components/FeedbackAndGoals"; 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 const App = () => {
   const handleContactClick = () => {

@@ -1,0 +1,94 @@
+/* Header Background */
+.header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #241d10, #004aad, #f4c561);
+  background-size: 400% 400%;
+  animation: gradientBG 8s ease infinite;
+}
+
+/* Animated Gradient */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animated Heading */
+.animated-heading span {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+/* Letter Animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Shadow for Subtext */
+.shadow-text {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Button Styling */
+.header-button {
+  font-size: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Scroll Down Icon */
+.scroll-down-container {
+  margin-top: 50px;
+  animation: bounce 2s infinite;
+}
+
+.scroll-down {
+  font-size: 2rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.scroll-down:hover {
+  color: #f4c561;
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
