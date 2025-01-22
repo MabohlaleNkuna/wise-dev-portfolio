@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Navigation = () => {
   const [active, setActive] = useState("#");
@@ -14,29 +15,30 @@ const Navigation = () => {
       left: "50%",
       transform: "translateX(-50%)",
       display: "flex",
-      gap: "1rem",
+      gap: "1.5rem",
       borderRadius: "3rem",
       backdropFilter: "blur(15px)",
       transition: "all 0.3s ease",
     },
     link: {
       background: "transparent",
-      padding: "0.8rem",
+      padding: "1rem",
       borderRadius: "50%",
       display: "flex",
       color: "#fff",
-      fontSize: "1.2rem",
-      transition: "background 0.3s, color 0.3s",
+      fontSize: "1.8rem",
+      transition: "background 0.3s, color 0.3s, transform 0.3s",
     },
     activeLink: {
       background: "#4CAF50",
       color: "#fff",
+      transform: "scale(1.1)",
     },
     hoverLink: {
       background: "rgba(0, 0, 0, 0.4)",
     },
     icons: {
-      fontSize: "1.5rem",  
+      fontSize: "2rem",  
     }
   };
 
@@ -52,7 +54,7 @@ const Navigation = () => {
         onMouseOver={(e) => (e.currentTarget.style.background = styles.hoverLink.background)}
         onMouseOut={(e) => (e.currentTarget.style.background = "transparent")}
       >
-        <i className="home-icon" style={styles.icons}>🏠</i>
+        <i className="bi bi-house-door" style={styles.icons}></i>
       </a>
       <a
         onClick={() => setActive("#about")}
@@ -64,7 +66,7 @@ const Navigation = () => {
         onMouseOver={(e) => (e.currentTarget.style.background = styles.hoverLink.background)}
         onMouseOut={(e) => (e.currentTarget.style.background = "transparent")}
       >
-        <i className="user-icon" style={styles.icons}>👤</i>
+        <i className="bi bi-person" style={styles.icons}></i>
       </a>
       <a
         onClick={() => setActive("#experience")}
@@ -76,7 +78,7 @@ const Navigation = () => {
         onMouseOver={(e) => (e.currentTarget.style.background = styles.hoverLink.background)}
         onMouseOut={(e) => (e.currentTarget.style.background = "transparent")}
       >
-        <i className="experience-icon" style={styles.icons}>📚</i>
+        <i className="bi bi-journal-bookmark" style={styles.icons}></i>
       </a>
       <a
         onClick={() => setActive("#contact")}
@@ -88,7 +90,7 @@ const Navigation = () => {
         onMouseOver={(e) => (e.currentTarget.style.background = styles.hoverLink.background)}
         onMouseOut={(e) => (e.currentTarget.style.background = "transparent")}
       >
-        <i className="contact-icon" style={styles.icons}>💬</i>
+        <i className="bi bi-chat-dots" style={styles.icons}></i>
       </a>
     </nav>
   );
