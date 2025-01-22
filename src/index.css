@@ -1,13 +1,28 @@
-/* Global styles */
-
+/* Global Styles in index.css */
 body {
   margin: 0;
-  background: linear-gradient(135deg, #241d10, #004aad, #059bd6);
-  background-size: 400% 400%;
-  animation: gradientBG 8s ease infinite;
 }
 
+h1, h2, h3 {
+  font-family: 'Courier New', Courier, monospace;
+  color: #004aad !important; /* Consistent blue color across all headers */
+  font-weight: bold;
+  letter-spacing: 1px;
+}
 
+h2 {
+  font-size: 2.5rem;
+}
 
+h3 {
+  font-size: 1.75rem;
+}
 
+p {
+  color: gray;
+}
 
+/* Optional: Additional styles */
+#experience {
+  background-color: #f8f9fa;
+}

@@ -1,72 +1,78 @@
-
-/* About Section */
 .about-section {
-    padding: 4rem 0;
-    text-align: center;
-    color: #ffffff;
-  }
-  
-  .about-heading {
-    color: #9c1c1c;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-  }
-  
+  padding: 4rem 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.about-heading {
+  color: #004aad;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-me {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotate-left 5s infinite alternate ease-in-out;
+}
+
+.about-me-image {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  background-color: #004aad;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+#experience {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 800px) {
   .about-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
-    padding: 2rem;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    display: block;
   }
-  
+
   .about-me {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: rotate-left 5s infinite alternate ease-in-out;
+    margin-bottom: 2rem;
   }
-  
-  .about-me-image {
-    width: 90%;
-    height: 90%;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.5s ease-in-out;
-  }
-  
+
   .about-text {
-    color: whitesmoke;
-    font-size: 1.1rem;
-    line-height: 1.8;
-  }
-  
-  .about-btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #f4c561;
-    color: #241d10;
-    border-radius: 30px;
-    text-decoration: none;
-    margin-top: 1rem;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* skills section styles */
-  #experience {
-    padding: 4rem 0;
-    text-align: center;
     width: 100%;
-    box-sizing: border-box;
   }
-  
+}

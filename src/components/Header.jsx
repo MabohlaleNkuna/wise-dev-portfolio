@@ -5,7 +5,7 @@ import "./styles/Header.css"; // Import custom styles
 
 const Header = () => {
   return (
-    <header className="header text-white">
+    <header className="header ">
       <div className="header-content text-center">
         {/* Animated Heading */}
         <h1 className="animated-heading display-4">

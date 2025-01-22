@@ -1,46 +1,82 @@
 import React from "react";
+import { Container, Row, Col, Card } from "react-bootstrap";
 
 const FeedbackAndGoals = () => {
   return (
-    <section className="feedback-container">
-      <div className="content-section">
-        <h1 className="main-title">Feedback & After-Program Aspirations</h1>
+    <section className="py-5 bg-light">
+      <Container>
+        <Row className="text-center mb-5">
+          <Col>
+            <h1 className="display-4 fw-bold text-primary mb-4">
+              Feedback & After-Program Aspirations
+            </h1>
+            <p className="text-muted fs-4">
+              Insights and reflections from the program, alongside goals for the future.
+            </p>
+          </Col>
+        </Row>
 
-        <div className="goal-section">
-          <h2 className="subtitle">Mentor Insights</h2>
-          <p className="description">
-            "The mentor has provided valuable perspectives throughout the journey, offering both actionable feedback and motivational support."
-          </p>
-        </div>
+        <Row className="mb-4">
+          <Col lg={4} md={6} className="mb-4">
+            <Card className="shadow-lg border-0">
+              <Card.Body>
+                <Card.Title className="h4 text-secondary">Mentor Insights</Card.Title>
+                <Card.Text className="text-muted">
+                  "The mentor has provided valuable perspectives throughout the journey, offering both actionable feedback and motivational support."
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
 
-        <div className="goal-section">
-          <h2 className="subtitle">Personal Growth</h2>
-          <p className="description">
-            "My abilities have expanded significantly in this program. I've developed a stronger grasp of full-stack methodologies and enhanced my problem-solving capabilities. However, I must focus on improving my time management and testing proficiency."
-          </p>
-        </div>
+          <Col lg={4} md={6} className="mb-4">
+            <Card className="shadow-lg border-0">
+              <Card.Body>
+                <Card.Title className="h4 text-secondary">Personal Growth</Card.Title>
+                <Card.Text className="text-muted">
+                  "My abilities have expanded significantly in this program. I've developed a stronger grasp of full-stack methodologies and enhanced my problem-solving capabilities."
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
 
-        <div className="goal-section">
-          <h2 className="subtitle">Post-Program Aspirations</h2>
-          <div className="goals-wrapper">
-            <div className="goal-category">
-              <h3 className="category-heading">Immediate Aspirations:</h3>
-              <ul className="goal-list">
-                <li>Obtain a role in web development.</li>
-                <li>Create 2-3 additional projects for my portfolio.</li>
-              </ul>
-            </div>
+          <Col lg={4} md={6} className="mb-4">
+            <Card className="shadow-lg border-0">
+              <Card.Body>
+                <Card.Title className="h4 text-secondary">Post-Program Aspirations</Card.Title>
+                <Card.Text className="text-muted">
+                  "I aim to further develop my skills and make a significant impact as a full-stack developer."
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
 
-            <div className="goal-category">
-              <h3 className="category-heading">Long-Term Aspirations:</h3>
-              <ul className="goal-list">
-                <li>Become proficient as a full-stack developer.</li>
-                <li>Engage in meaningful open-source contributions.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+        <Row className="mb-5">
+          <Col lg={6} md={12} className="mb-4">
+            <Card className="shadow-lg border-0">
+              <Card.Body>
+                <Card.Title className="h4 text-secondary">Immediate Aspirations</Card.Title>
+                <ul className="list-unstyled text-muted">
+                  <li>• Obtain a role in web development.</li>
+                  <li>• Create 2-3 additional projects for my portfolio.</li>
+                </ul>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col lg={6} md={12} className="mb-4">
+            <Card className="shadow-lg border-0">
+              <Card.Body>
+                <Card.Title className="h4 text-secondary">Long-Term Aspirations</Card.Title>
+                <ul className="list-unstyled text-muted">
+                  <li>• Become proficient as a full-stack developer.</li>
+                  <li>• Engage in meaningful open-source contributions.</li>
+                </ul>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
-import './styles/Experience.css';
+import { Container, Row, Col, Card } from "react-bootstrap";
+import "./styles/Experience.css";
 
 const skillsFrontend = [
   { skill: "HTML", level: "Experienced" },
@@ -19,29 +20,39 @@ const skillsBackend = [
 ];
 
 const ExperienceSection = ({ title, skills }) => (
-  <div className="experience-card">
-    <h3>{title}</h3>
-    <div className="content">
-      {skills.map(({ skill, level }) => (
-        <article className="details" key={skill}>
-          <div>
-            <h4>{skill}</h4>
-            <small>{level}</small>
-          </div>
-        </article>
-      ))}
-    </div>
-  </div>
+  <Card className="mb-4 shadow-sm border-0">
+    <Card.Body>
+      <h3 className="mb-4">{title}</h3>
+      <Row className="g-3">
+        {skills.map(({ skill, level }) => (
+          <Col key={skill} xs={12} sm={6}>
+            <div className="d-flex align-items-center">
+              <div>
+                <h5 className="mb-1">{skill}</h5>
+                <small className="text-muted">{level}</small>
+              </div>
+            </div>
+          </Col>
+        ))}
+      </Row>
+    </Card.Body>
+  </Card>
 );
 
 const Experience = () => {
   return (
-    <section id="experience">
-      <h2 style={{ color: "#800000", fontSize: "2.5rem", marginBottom: "2rem" }}>My Skills</h2>
-      <div className="experience-container">
-        <ExperienceSection title="Frontend Development" skills={skillsFrontend} />
-        <ExperienceSection title="Backend Development" skills={skillsBackend} />
-      </div>
+    <section id="experience" className="py-5 bg-light">
+      <Container>
+        <h2 className="text-center mb-5">My Skills</h2>
+        <Row>
+          <Col md={6}>
+            <ExperienceSection title="Frontend Development" skills={skillsFrontend} />
+          </Col>
+          <Col md={6}>
+            <ExperienceSection title="Backend Development" skills={skillsBackend} />
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 };

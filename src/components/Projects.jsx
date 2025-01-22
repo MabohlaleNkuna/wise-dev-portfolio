@@ -1,11 +1,11 @@
 import React from "react";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import IMG1 from "../assets/img1.png";
 import IMG2 from "../assets/img2.png";
 import IMG3 from "../assets/img3.png";
 import IMG4 from "../assets/img4.png";
 import IMG5 from "../assets/img5.png";
 import IMG6 from "../assets/img6.png";
-import './styles/Projects.css';
 
 const individualProjects = [
   {
@@ -17,7 +17,7 @@ const individualProjects = [
     github: "https://github.com/mabohlalenkuna/project1extra",
     demo: "https://mabohlalenkuna.dev/project1extra",
     features: ["Feature 1", "Feature 2"],
-    challenges: "Resolved issue with server latency."
+    challenges: "Resolved issue with server latency.",
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const individualProjects = [
     github: "https://github.com/mabohlalenkuna/todolist",
     demo: "https://mabohlalenkuna.dev/todolist",
     features: ["Add tasks", "Filter tasks"],
-    challenges: "Overcame performance issues with Redux state management."
+    challenges: "Overcame performance issues with Redux state management.",
   },
   {
     id: 3,
@@ -39,8 +39,8 @@ const individualProjects = [
     github: "https://github.com/mabohlalenkuna/shoppinglist",
     demo: "https://mabohlalenkuna.dev/shoppinglist",
     features: ["Sync data across devices", "Push notifications"],
-    challenges: "Managed real-time data syncing with Firebase."
-  }
+    challenges: "Managed real-time data syncing with Firebase.",
+  },
 ];
 
 const groupProjects = [
@@ -54,7 +54,7 @@ const groupProjects = [
     demo: "https://mabohlalenkuna.dev/hotelapp",
     features: ["Room booking", "Payment gateway integration"],
     team: ["John Doe", "Jane Smith"],
-    collaboration: "Worked in an Agile environment using Trello."
+    collaboration: "Worked in an Agile environment using Trello.",
   },
   {
     id: 5,
@@ -66,75 +66,89 @@ const groupProjects = [
     demo: "https://mabohlalenkuna.dev/weatherapp",
     features: ["Current weather", "Hourly forecast"],
     team: ["Alice Brown", "Charlie Green"],
-    collaboration: "Collaborated using GitHub and Slack."
-  }
+    collaboration: "Collaborated using GitHub and Slack.",
+  },
 ];
 
 const Projects = () => {
   return (
     <section id="projects">
-      <h2 style={{ 
-        color: "#800000", 
-        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif", 
-        textShadow: "2px 2px 5px rgba(0, 0, 0, 0.5)",
-        fontSize: "2rem",
-        marginBottom: "3rem"
-      }}>
-        My Projects
-      </h2>
+      <Container>
+        <h2 className="text-center my-5" style={{ color: "#800000", fontWeight: 800 }}>
+          My Projects
+        </h2>
 
-      <h2>Individual Projects</h2>
-      <div className="container">
-        {individualProjects.map(({ id, image, title, description, technologies, github, demo, features, challenges }) => (
-          <article key={id} className="item">
-            <div className="itemImage">
-              <img src={image} alt={title} />
-            </div>
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <p><strong>Tech Stack:</strong> {technologies}</p>
-            <ul>
-              <li><strong>Key Features:</strong> {features.join(", ")}</li>
-              <li><strong>Challenges Faced and Solutions:</strong> {challenges}</li>
-            </ul>
-            <div className="cta">
-              <a href={github} className="btn" target="_blank" rel="noopener noreferrer">
-                Github
-              </a>
-              <a href={demo} className="btnPrimary" target="_blank" rel="noopener noreferrer">
-                Live Demo
-              </a>
-            </div>
-          </article>
-        ))}
-      </div>
+        <h3 className="mb-4 text-primary">Individual Projects</h3>
+        <Row className="g-4">
+          {individualProjects.map(
+            ({ id, image, title, description, technologies, github, demo, features, challenges }) => (
+              <Col key={id} sm={12} md={6} lg={4}>
+                <Card className="h-100 shadow-lg rounded">
+                  <Card.Img variant="top" src={image} alt={title} style={{ height: "200px", objectFit: "cover" }} />
+                  <Card.Body>
+                    <Card.Title>{title}</Card.Title>
+                    <Card.Text>{description}</Card.Text>
+                    <Card.Text>
+                      <strong>Tech Stack:</strong> {technologies}
+                    </Card.Text>
+                    <Card.Text>
+                      <strong>Key Features:</strong> {features.join(", ")}
+                    </Card.Text>
+                    <Card.Text>
+                      <strong>Challenges:</strong> {challenges}
+                    </Card.Text>
+                  </Card.Body>
+                  <Card.Footer className="d-flex justify-content-between">
+                    <Button variant="outline-dark" href={github} target="_blank" rel="noopener noreferrer">
+                      Github
+                    </Button>
+                    <Button variant="primary" href={demo} target="_blank" rel="noopener noreferrer">
+                      Live Demo
+                    </Button>
+                  </Card.Footer>
+                </Card>
+              </Col>
+            )
+          )}
+        </Row>
 
-      <h2>Group Projects</h2>
-      <div className="container">
-        {groupProjects.map(({ id, image, title, description, technologies, github, demo, features, team, collaboration }) => (
-          <article key={id} className="item">
-            <div className="itemImage">
-              <img src={image} alt={title} />
-            </div>
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <p><strong>Tech Stack:</strong> {technologies}</p>
-            <ul>
-              <li><strong>Key Features:</strong> {features.join(", ")}</li>
-              <li><strong>Team Members:</strong> {team.join(", ")}</li>
-              <li><strong>Collaboration Experience:</strong> {collaboration}</li>
-            </ul>
-            <div className="cta">
-              <a href={github} className="btn" target="_blank" rel="noopener noreferrer">
-                Github
-              </a>
-              <a href={demo} className="btnPrimary" target="_blank" rel="noopener noreferrer">
-                Live Demo
-              </a>
-            </div>
-          </article>
-        ))}
-      </div>
+        <h3 className="mt-5 mb-4 text-success">Group Projects</h3>
+        <Row className="g-4">
+          {groupProjects.map(
+            ({ id, image, title, description, technologies, github, demo, features, team, collaboration }) => (
+              <Col key={id} sm={12} md={6} lg={4}>
+                <Card className="h-100 shadow-lg rounded">
+                  <Card.Img variant="top" src={image} alt={title} style={{ height: "200px", objectFit: "cover" }} />
+                  <Card.Body>
+                    <Card.Title>{title}</Card.Title>
+                    <Card.Text>{description}</Card.Text>
+                    <Card.Text>
+                      <strong>Tech Stack:</strong> {technologies}
+                    </Card.Text>
+                    <Card.Text>
+                      <strong>Key Features:</strong> {features.join(", ")}
+                    </Card.Text>
+                    <Card.Text>
+                      <strong>Team Members:</strong> {team.join(", ")}
+                    </Card.Text>
+                    <Card.Text>
+                      <strong>Collaboration:</strong> {collaboration}
+                    </Card.Text>
+                  </Card.Body>
+                  <Card.Footer className="d-flex justify-content-between">
+                    <Button variant="outline-dark" href={github} target="_blank" rel="noopener noreferrer">
+                      Github
+                    </Button>
+                    <Button variant="success" href={demo} target="_blank" rel="noopener noreferrer">
+                      Live Demo
+                    </Button>
+                  </Card.Footer>
+                </Card>
+              </Col>
+            )
+          )}
+        </Row>
+      </Container>
     </section>
   );
 };

@@ -1,156 +1,107 @@
-/* Feedback and Goals Container */
-.feedback-container {
-    height: 100vh;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 2rem;
+
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.mb-4, .mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.display-4 {
+  font-size: 3.5rem;
+  color: #004aad;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 3s ease-out;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #004aad;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .content-section {
-    width: 100%;
-    max-width: 1200px;
-    text-align: center;
-    margin: 0 auto;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Main Title Style */
-  .main-title {
-    font-size: 5rem;
-    color: #b9333c;
-    margin-bottom: 2rem;
-    animation: fadeInAnimation 4s ease-in-out;
-  }
-  
-  /* Fade-in Animation */
-  @keyframes fadeInAnimation {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    50% {
-      opacity: 1;
-      transform: translateY(-15px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Section Styling */
-  .goal-section {
-    margin-bottom: 2rem;
-  }
-  
-  .subtitle {
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .display-4 {
     font-size: 2.5rem;
-    color: #e4e4e4;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
   }
-  
-  .description {
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .card-title {
     font-size: 1.25rem;
-    line-height: 1.8;
-    color: #d1d1d1;
   }
-  
-  /* Goals Layout */
-  .goals-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 2rem;
-    gap: 2rem; /* Adds space between categories */
+
+  .card-text {
+    font-size: 0.95rem;
   }
-  
-  .goal-category {
-    width: 100%;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    box-sizing: border-box;
+
+  h5 {
+    font-size: 1.125rem;
   }
-  
-  /* Goal Category Heading */
-  .category-heading {
+}
+
+@media (max-width: 450px) {
+  .display-4 {
     font-size: 2rem;
-    color: #d8b33f;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
   }
-  
-  /* Goal List Styling */
-  .goal-list {
-    font-size: 1.2rem;
-    color: #c8c8c8;
-    list-style-type: none;
-    padding-left: 0;
+
+  .card-body {
+    padding: 1rem;
   }
-  
-  .goal-list li {
-    margin-bottom: 1rem;
+
+  .card-title {
+    font-size: 1.125rem;
   }
-  
-  .goal-list li::before {
-    content: "✓";
-    margin-right: 10px;
-    color: #b9333c;
+
+  .card-text {
+    font-size: 0.9rem;
   }
-  
-  /* Media Queries for Responsiveness */
-  
-  /* For smaller screens */
-  @media (max-width: 768px) {
-    .main-title {
-      font-size: 3rem;
-    }
-  
-    .subtitle {
-      font-size: 2rem;
-    }
-  
-    .description {
-      font-size: 1.15rem;
-    }
-  
-    .goals-wrapper {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .goal-category {
-      width: 90%; /* Makes each category take up most of the space */
-    }
-  }
-  
-  /* For mobile screens */
-  @media (max-width: 450px) {
-    .main-title {
-      font-size: 2.5rem;
-    }
-  
-    .subtitle {
-      font-size: 1.75rem;
-    }
-  
-    .description {
-      font-size: 1rem;
-    }
-  
-    .goals-wrapper {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-  
-    .goal-category {
-      width: 100%;
-      padding: 0.8rem; 
-    }
-  }
-  
-  
-  
+}

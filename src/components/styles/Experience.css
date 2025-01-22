@@ -1,105 +1,28 @@
-.experience-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 0 2rem;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .experience-card {
-    padding: 2.4rem 5rem;
-    border-radius: 2rem;
-    border: 1px solid transparent;
-    transition: all 0.3s ease-in-out;
-    width: 100%;
-    box-sizing: border-box;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  .experience-card h3 {
-    margin-bottom: 2rem;
-    color: #000000;
-    text-align: left;
-    font-size: 2rem;
-  }
-  
-  .experience-card .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 2rem;
-  }
-  
-  .experience-card .details {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  #experience h2 {
-    color: #9c1c1c;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  
-  .experience-card .details h4 {
-    color: #9c1c1c;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-  }
-  
-  small {
-    color: #ffffff; 
-  }
-  
-  @media (max-width: 768px) {
-    .experience-container {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-  
-    .experience-card {
-      padding: 2rem 3rem;
-    }
-  
-    #experience {
-      padding: 3rem 1rem;
-    }
-  
-    .experience-card .content {
-      grid-template-columns: 1fr;
-    }
-  
-    .experience-card h3,
-    .experience-card h4,
-    .experience-card small {
-      text-align: left;
-    }
-  }
-  
-  @media (max-width: 450px) {
-    .experience-container {
-      grid-template-columns: 1fr;
-      padding: 0 1rem;
-    }
-  
-    .experience-card {
-      padding: 1.6rem 1.0rem; 
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    }
-  
-    #experience {
-      padding: 2.5rem 0.5rem;
-    }
-  
-    .experience-card h3 {
-      font-size: 1.6rem;
-    }
-  
-    .experience-card h3,
-    .experience-card h4,
-    .experience-card small {
-      text-align: left;
-      margin-left: 1.5rem;
-    }
-  }
+/* Experience Section Enhancements */
+#experience {
+  background-color: #f8f9fa;
+}
+
+#experience h2 {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+.experience-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.experience-card .details {
+  padding: 10px 0;
+}
+
+.details h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.details small {
+  color: #6c757d;
+}

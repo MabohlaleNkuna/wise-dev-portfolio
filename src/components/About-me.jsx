@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from "react"; 
 import PIC from "../assets/PIC.jpg";
 import './styles/About.css';
 
