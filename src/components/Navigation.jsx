@@ -1,45 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Navigation = () => {
   const [active, setActive] = useState("#");
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 400);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 400);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const styles = {
     nav: {
-      background: "rgba(0, 0, 0, 0.3)",
-      width: "max-content",
-      padding: "0.8rem 2rem",
+      background: "rgba(207, 207, 207, 0.3)",
+      height: isSmallScreen ? "5rem" : "7rem",
+      width: isSmallScreen ? "16rem" : "23rem",
+      padding: isSmallScreen ? "0.4rem 0.8rem" : "0.8rem 2rem",
       zIndex: 2,
       position: "fixed",
       bottom: "2rem",
       left: "50%",
       transform: "translateX(-50%)",
       display: "flex",
-      gap: "1.5rem",
+      gap: isSmallScreen ? "1rem" : "1.5rem",
       borderRadius: "3rem",
       backdropFilter: "blur(15px)",
       transition: "all 0.3s ease",
     },
     link: {
       background: "transparent",
-      padding: "1rem",
+      padding: isSmallScreen ? "0.8rem" : "1rem",
       borderRadius: "50%",
       display: "flex",
       color: "#fff",
-      fontSize: "1.8rem",
+      fontSize: isSmallScreen ? "0.8rem" : "1rem",
       transition: "background 0.3s, color 0.3s, transform 0.3s",
-    },
-    activeLink: {
-      background: "#4CAF50",
-      color: "#fff",
-      transform: "scale(1.1)",
     },
     hoverLink: {
       background: "rgba(0, 0, 0, 0.4)",
     },
     icons: {
-      fontSize: "2rem",  
-    }
+      fontSize: isSmallScreen ? "1.4rem" : "1.7rem",
+      color: "#0d6efd",
+    },
   };
 
   return (

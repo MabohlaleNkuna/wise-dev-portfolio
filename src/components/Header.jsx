@@ -1,13 +1,12 @@
 import React from "react";
 import CV from "../assets/wise-cv.pdf";
 import { Button } from "react-bootstrap";
-import "./styles/Header.css"; // Import custom styles
+import "./styles/Header.css";
 
 const Header = () => {
   return (
-    <header className="header ">
+    <header className="header">
       <div className="header-content text-center">
-        {/* Animated Heading */}
         <h1 className="animated-heading display-4">
           {"Wise Mabohlale Nkuna".split("").map((char, index) => (
             <span key={index} style={{ animationDelay: `${index * 50}ms` }}>
@@ -16,8 +15,6 @@ const Header = () => {
           ))}
         </h1>
         <p className="lead mt-3 shadow-text">Fullstack Developer</p>
-
-        {/* Details Section */}
         <div className="header-details mt-4">
           <p>
             <strong>CodeTribe Location:</strong> Pretoria
@@ -29,8 +26,6 @@ const Header = () => {
             <strong>Date:</strong> Last updated 10 January 2025
           </p>
         </div>
-
-        {/* CV Download Button */}
         <div className="mt-4">
           <Button
             variant="primary"
@@ -41,8 +36,6 @@ const Header = () => {
             Download My CV
           </Button>
         </div>
-
-        {/* Scroll Down Icon */}
         <div className="scroll-down-container">
           <a href="#contact" className="scroll-down">
             <i className="bi bi-chevron-double-down"></i>
