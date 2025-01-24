@@ -4,19 +4,9 @@ import IMG00 from "../assets/img00.png";
 
 
 const individualProjects = [
+ 
   {
     id: 1,
-    image: IMG00,
-    title: "Project 1 Extra",
-    description: "A brief overview of Project 1 Extra.",
-    technologies: "React, Node.js, Express",
-    github: "https://github.com/mabohlalenkuna/project1extra",
-    demo: "https://mabohlalenkuna.dev/project1extra",
-    features: ["Feature 1", "Feature 2"],
-    challenges: "Resolved issue with server latency.",
-  },
-  {
-    id: 2,
     image: IMG00,
     title: "ToDo List",
     description: "A simple task management app.",
@@ -27,7 +17,7 @@ const individualProjects = [
     challenges: "Overcame performance issues with Redux state management.",
   },
   {
-    id: 3,
+    id: 2,
     image: IMG00,
     title: "Shopping List",
     description: "A shopping list app with Firebase integration.",
@@ -37,22 +27,50 @@ const individualProjects = [
     features: ["Sync data across devices", "Push notifications"],
     challenges: "Managed real-time data syncing with Firebase.",
   },
+  {
+    id: 3,
+    image: IMG00,
+    title: "Hotel Application",
+    description: "A hotel booking system with Express and MongoDB.",
+    technologies: "React, Express, MongoDB",
+    github: "https://github.com/mabohlalenkuna/hotelapp",
+    demo: "https://github.com/MabohlaleNkuna/hotel-booking-app/tree/dev",
+    features: ["Room booking", "Payment gateway integration"],
+   
+  },
 ];
 
 const groupProjects = [
   {
     id: 4,
     image: IMG00,
-    title: "Hotel Application",
-    description: "A hotel booking system with Express and MongoDB.",
-    technologies: "React, Express, MongoDB",
-    github: "https://github.com/mabohlalenkuna/hotelapp",
-    demo: "https://mabohlalenkuna.dev/hotelapp",
-    features: ["Room booking", "Payment gateway integration"],
-    team: ["John Doe", "Jane Smith"],
-    collaboration: "Worked in an Agile environment using Trello.",
+    title: "Restaurant Application",
+    description: "A Restaurant booking system with React Native, Express, and MongoDB.",
+    technologies: "React, React Native, Express, MongoDB",
+    github: "https://github.com/MabohlaleNkuna/restaurant-app-admin/tree/authentication",
+    demo: "https://",
+    features: ["Restaurant booking", "Reserving", "Payment gateway integration"],
+    team: ["Mabohlale Nkuna", "Yolanda Mabotja"],
+    collaboration: "Worked in an Agile environment using Trello board.",
   },
- 
+  {
+    id: 5,
+    image: IMG00,
+    title: "Weather-Based Travel Planner",
+    description: "An app that helps users plan trips based on weather conditions.",
+    technologies: "React.js, Node.js, Express.js, OpenWeatherMap API",
+    github: "https://github.com/Yolanda-landii/Weather_Based-Travel_Planner",
+    demo: "https://weather-based-travel-planner-eight.vercel.app/",
+    features: [
+      "Destination search",
+      "Real-time weather updates",
+      "7-day forecast",
+      "Activity recommendations",
+      "Favorites list",
+    ],
+    team: ["Mabohlale Nkuna", "Yolanda Mabotja"],
+    collaboration: "Implemented using pair programming within 2 days.",
+  },
 ];
 
 const Projects = () => {
