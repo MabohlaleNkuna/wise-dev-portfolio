@@ -2,9 +2,7 @@ import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import IMG00 from "../assets/img00.png";
 
-
 const individualProjects = [
- 
   {
     id: 1,
     image: IMG00,
@@ -36,7 +34,6 @@ const individualProjects = [
     github: "https://github.com/mabohlalenkuna/hotelapp",
     demo: "https://github.com/MabohlaleNkuna/hotel-booking-app/tree/dev",
     features: ["Room booking", "Payment gateway integration"],
-   
   },
 ];
 
@@ -87,7 +84,7 @@ const Projects = () => {
             ({ id, image, title, description, technologies, github, demo, features, challenges }) => (
               <Col key={id} sm={12} md={6} lg={4}>
                 <Card className="h-100 shadow-lg rounded">
-                  <Card.Img variant="top" src={image} alt={title} style={{ height: "200px", objectFit: "cover" }} />
+                  <Card.Img variant="top" src={image} alt={title} className="project-card-img" />
                   <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>{description}</Card.Text>
@@ -121,7 +118,7 @@ const Projects = () => {
             ({ id, image, title, description, technologies, github, demo, features, team, collaboration }) => (
               <Col key={id} sm={12} md={6} lg={4}>
                 <Card className="h-100 shadow-lg rounded">
-                  <Card.Img variant="top" src={image} alt={title} style={{ height: "200px", objectFit: "cover" }} />
+                  <Card.Img variant="top" src={image} alt={title} className="project-card-img" />
                   <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>{description}</Card.Text>
