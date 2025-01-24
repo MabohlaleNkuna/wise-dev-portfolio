@@ -1,16 +1,12 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import IMG1 from "../assets/img1.png";
-import IMG2 from "../assets/img2.png";
-import IMG3 from "../assets/img3.png";
-import IMG4 from "../assets/img4.png";
-import IMG5 from "../assets/img5.png";
-import IMG6 from "../assets/img6.png";
+import IMG00 from "../assets/img00.png";
+
 
 const individualProjects = [
   {
     id: 1,
-    image: IMG1,
+    image: IMG00,
     title: "Project 1 Extra",
     description: "A brief overview of Project 1 Extra.",
     technologies: "React, Node.js, Express",
@@ -21,7 +17,7 @@ const individualProjects = [
   },
   {
     id: 2,
-    image: IMG2,
+    image: IMG00,
     title: "ToDo List",
     description: "A simple task management app.",
     technologies: "React, Redux",
@@ -32,7 +28,7 @@ const individualProjects = [
   },
   {
     id: 3,
-    image: IMG3,
+    image: IMG00,
     title: "Shopping List",
     description: "A shopping list app with Firebase integration.",
     technologies: "React Native, Firebase",
@@ -46,7 +42,7 @@ const individualProjects = [
 const groupProjects = [
   {
     id: 4,
-    image: IMG4,
+    image: IMG00,
     title: "Hotel Application",
     description: "A hotel booking system with Express and MongoDB.",
     technologies: "React, Express, MongoDB",
@@ -56,18 +52,7 @@ const groupProjects = [
     team: ["John Doe", "Jane Smith"],
     collaboration: "Worked in an Agile environment using Trello.",
   },
-  {
-    id: 5,
-    image: IMG5,
-    title: "Weather App",
-    description: "An app that shows real-time weather data.",
-    technologies: "React, Node.js, OpenWeather API",
-    github: "https://github.com/mabohlalenkuna/weatherapp",
-    demo: "https://mabohlalenkuna.dev/weatherapp",
-    features: ["Current weather", "Hourly forecast"],
-    team: ["Alice Brown", "Charlie Green"],
-    collaboration: "Collaborated using GitHub and Slack.",
-  },
+ 
 ];
 
 const Projects = () => {
