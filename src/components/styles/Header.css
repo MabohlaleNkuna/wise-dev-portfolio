@@ -1,34 +1,11 @@
-/* Header Background */
-.header {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-size: 400% 400%;
-
-}
-
-/* Animated Gradient */
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 /* Animated Heading */
 .animated-heading span {
+  margin-top: 50px;
   display: inline-block;
-  font-size: 3rem;
+  font-size: 4rem; /* Increased font size */
   font-weight: bold;
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
-  animation: fadeIn 0.8s ease forwards;
+  text-shadow: 6px 6px 15px rgba(0, 0, 0, 0.7); /* Increased shadow intensity */
+  animation: fadeIn 1s ease forwards; /* Slower animation for a smoother effect */
   opacity: 0;
 }
 
@@ -40,13 +17,8 @@
   }
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-40px); /* Increased distance for a more dramatic effect */
   }
-}
-
-/* Shadow for Subtext */
-.shadow-text {
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
 }
 
 /* Button Styling */
