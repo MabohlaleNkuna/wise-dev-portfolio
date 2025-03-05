@@ -32,7 +32,7 @@ const individualProjects = [
     description: "A hotel booking system with Express and MongoDB.",
     technologies: "React, Express, MongoDB",
     github: "https://github.com/mabohlalenkuna/hotelapp",
-    demo: "https://github.com/MabohlaleNkuna/hotel-booking-app/tree/dev",
+    demo: "https://hotel-booking-app-client.netlify.app/",
     features: ["Room booking", "Payment gateway integration"],
   },
 ];
