@@ -1,5 +1,5 @@
 import React from "react";
-import CV from "../assets/wise-cv.pdf";
+import CV from "../assets/wiseM-cv.pdf";
 import { Button } from "react-bootstrap";
 import "./styles/Header.css";
 
