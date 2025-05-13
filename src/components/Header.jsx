@@ -14,16 +14,13 @@ const Header = () => {
             </span>
           ))}
         </h1>
-        <p className="lead mt-3 shadow-text">Fullstack Developer</p>
+        <p className="lead mt-3 shadow-text">Mobile & Web Developer</p>
         <div className="header-details mt-4">
           <p>
             <strong>CodeTribe Location:</strong> Pretoria
           </p>
           <p>
             <strong>Program Enrolled:</strong> Fullstack Mobile and Web Development
-          </p>
-          <p>
-            <strong>Date:</strong> Last updated 10 January 2025
           </p>
         </div>
         <div className="mt-4">
