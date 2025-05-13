@@ -44,7 +44,7 @@ const About = () => {
         </div>
         <div>
           <p className="about-text">
-            I am a passionate Full-Stack Developer with experience in building impactful web and mobile applications. At Mlab CodeTribe Academy, I specialized in developing React Native mobile apps and web solutions, creating intuitive user experiences. Similarly, at Zaio Coding School, I honed my expertise in full-stack web application development, mastering modern tools and technologies to deliver dynamic software solutions. At Botlhale, I expanded my skill set by working on Python-based projects, including web scraping, audio processing, data processing, and chatbot development. My technical expertise includes front-end development with React, Redux, HTML, CSS, JavaScript, and TypeScript, as well as back-end development using Node.js, Express, MongoDB, Firebase, SQLite, and SQL. I also have extensive experience integrating APIs to create scalable applications. With certifications from SheCodes and Cisco Networking Academy, I am driven by curiosity and innovation, committed to delivering efficient solutions to real-world challenges.
+          I am a Full-Stack Developer and recent graduate of the mLab CodeTribe Academy, specializing in React and React Native. With experience from Zaio Coding School and Botlhale AI, I’ve developed strong skills in both front-end and back-end technologies, including Node.js, MongoDB, Firebase,React,Java and Python. Passionate about innovation, I strive to create impactful, scalable solutions to real-world challenges.
           </p>
           <button className="about-btn" onClick={scrollToContact}>
             Get in touch
